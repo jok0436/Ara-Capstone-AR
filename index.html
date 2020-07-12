@@ -14,7 +14,7 @@
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-            <a-mixin id="text" text="align: center; width: 3;
+            <a-mixin id="text" text="align: center; width: 10;
                 font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt;
                 value: Virtual Medical Coaching">
             </a-mixin>
@@ -25,7 +25,7 @@
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-text value="Virtual Medical Coaching" scale="120 120 120"></a-text>
+            <a-plane rotation="-90 0 -1" position="0 0 0" material="opacity: 0.7" color="black"></a-plane>
             <a-text mixin="text" position="0 1 0" wrap-count="15" rotation="-90 0 0" color="blue"></a-text>
 
         </a-marker>
