@@ -13,12 +13,21 @@
     <a-scene embedded vr-mode-ui="enabled: false"
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
+        <a-assets>
+            <a-mixin id="text" text="align: center; width: 3;
+                font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt;
+                value: Virtual Medical Coaching">
+            </a-mixin>
+        </a-assets>
+
         <a-marker type='barcode' value='7'>
             <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='6'>
             <a-text value="Virtual Medical Coaching" scale="120 120 120"></a-text>
+            <a-text mixin="text" position="0 1 0" wrap-count="15" rotation="-90 0 0" color="blue"></a-text>
+
         </a-marker>
 
         <a-entity camera></a-entity>
